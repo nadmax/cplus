@@ -1,4 +1,4 @@
-![CI](https://github.com/nadmax/phenomenon/actions/workflows/check.yml/badge.svg)
+![CI](https://github.com/nadmax/phenomenon/actions/workflows/ci.yml/badge.svg)
 
 # Cplus
 
