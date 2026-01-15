@@ -1,4 +1,4 @@
-name: check
+name: CI
 
 on:
   push:
@@ -10,9 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v5
 
       - name: Build Library
-        run: |
-          make && make clean
+        run: make && make clean
