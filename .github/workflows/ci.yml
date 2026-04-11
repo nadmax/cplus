@@ -3,15 +3,16 @@ name: CI
 on:
   push:
     branches:
-    -  master
+      - master
   pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Build Library
         run: make && make clean
