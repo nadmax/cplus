@@ -27,7 +27,6 @@ char* Point_str(PointClass* this)
 
     bufsz = snprintf(NULL, 0, "<PointClass (%d, %d)>", this->x, this->y);
     buf = malloc(bufsz + 1);
-
     if (!buf)
         raise("Out of memory");
 
@@ -44,7 +43,6 @@ PointClass* Point_add(const PointClass* this, const PointClass* other)
         raise("NULL value given");
 
     point = new(Point, this->x + other->x, this->y + other->y);
-
     if (!point)
         raise("Out of memory");
 
@@ -59,7 +57,6 @@ PointClass* Point_sub(const PointClass* this, const PointClass* other)
         raise("NULL value given");
 
     point = new(Point, this->x - other->x, this->y - other->y);
-
     if (!point)
         raise("Out of memory");
 
@@ -74,7 +71,6 @@ PointClass* Point_mul(const PointClass* this, const PointClass* other)
         raise("NULL value given");
 
     point = new(Point, this->x * other->x, this->y * other->y);
-
     if (!point)
         raise("Out of memory");
 
@@ -89,7 +85,6 @@ PointClass* Point_div(const PointClass* this, const PointClass* other)
         raise("NULL value given");
 
     point = new(Point, this->x / other->x, this->y / other->y);
-
     if (!point)
         raise("Out of memory");
 

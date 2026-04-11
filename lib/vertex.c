@@ -26,7 +26,6 @@ char *Vertex_str(VertexClass* this)
     ssize_t bufsz = snprintf(
         NULL, 0, "<VertexClass (%d, %d, %d)>", this->x, this->y, this->z);
     char* buf = malloc(bufsz + 1);
-
     if (!buf)
         raise("Out of Memory");
 

@@ -23,7 +23,6 @@ char* Int_str(IntClass* this)
 
     bufsz = snprintf(NULL, 0, "<Int (%d)>", this->value);
     buf = malloc(bufsz + 1);
-
     if (!buf)
         raise("Out of Memory");
 
